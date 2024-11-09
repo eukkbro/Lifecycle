@@ -8,14 +8,50 @@
 
    <Button
        android:id="@+id/buttonMoveSubActivity"
-       android:layout_width="200dp"
+       android:layout_width="0dp"
        android:layout_height="100dp"
-       android:text="SubActivity로 이동"
+       android:text="서브액티비티로 이동"
        android:textSize="18sp"
        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintLeft_toLeftOf="parent"
-       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintRight_toLeftOf="@id/buttonMoveAFragment"
+       app:layout_constraintBottom_toTopOf="@id/frameLayout"
        />
+
+   <Button
+       android:id="@+id/buttonMoveAFragment"
+       android:layout_width="0dp"
+       android:layout_height="100dp"
+       android:text="A프래그먼트로 이동"
+       android:textSize="18sp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toRightOf="@id/buttonMoveSubActivity"
+       app:layout_constraintRight_toLeftOf="@id/buttonMoveBFragment"
+       app:layout_constraintBottom_toTopOf="@id/frameLayout"
+       />
+
+   <Button
+       android:id="@+id/buttonMoveBFragment"
+       android:layout_width="0dp"
+       android:layout_height="100dp"
+       android:text="B프래그먼트로 이동"
+       android:textSize="18sp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toRightOf="@id/buttonMoveAFragment"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/frameLayout"
+       />
+
+   <FrameLayout
+       android:id="@+id/frameLayout"
+       android:layout_width="match_parent"
+       android:layout_height="710dp"
+       android:layout_weight="10"
+       app:layout_constraintTop_toBottomOf="@id/buttonMoveSubActivity"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent">
+   </FrameLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

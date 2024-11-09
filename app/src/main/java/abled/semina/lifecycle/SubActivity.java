@@ -1,6 +1,8 @@
 package abled.semina.lifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,8 @@ import android.util.Log;
 public class SubActivity extends AppCompatActivity {
 
     private String TAG = "생명주기 확인";
+    Fragment fragmentFirst, fragmentSecond;
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
